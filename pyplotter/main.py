@@ -12,10 +12,11 @@ Options:
 """
 
 from docopt import docopt
-from pyplotter import __version__, Graph, Plotter
+from pyplotter import Graph, Plotter
+VERSION = (0,0,1)
 
 def run():
-    version = ".".join(str(x) for x in __version__)
+    version = ".".join(str(x) for x in VERSION)
     arguments = docopt(__doc__, version=version)
     numbers = arguments.get('<numbers>', None)
     if numbers:
