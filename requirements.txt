@@ -1,0 +1,2 @@
+pypandoc==0.7.0
+docopt==0.6.1
