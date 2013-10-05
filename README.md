@@ -44,15 +44,15 @@
         show_title: Display graph title (if any)
         show_data_range: Display X axis data range
 
-        pyplotter.Plotter.plot(graph, show_x_axis=False, padding=1, height=10)
-        Another example
-                                                    ▇       ▁         -- Max: 50
-        ▃                       ▄   ▅               ▇       ▇
-        ▇     ▁           ▁     ▇   ▇ ▇       ▂ ▇   ▇     ▁ ▇   ▇
-        ▇     ▇     ▆ ▆   ▇ ▄   ▇   ▇ ▇     ▅ ▇ ▇   ▇     ▇ ▇   ▇
-        ▇     ▇     ▇ ▇   ▇ ▇   ▇   ▇ ▇     ▇ ▇ ▇ ▆ ▇ ▂ ▁ ▇ ▇   ▇
-        ▇     ▇     ▇ ▇   ▇ ▇   ▇   ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇   ▇
-        ▇   ▄ ▇   ▇ ▇ ▇   ▇ ▇   ▇   ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▂ ▇
-        ▇   ▇ ▇ ▆ ▇ ▇ ▇ ▄ ▇ ▇ ▇ ▇ ▄ ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇
-        ▇ ▃ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇
-        ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▄ ▁ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇   -- Min 2
+    pyplotter.Plotter.plot(graph, show_x_axis=False, padding=1, height=10)
+    Another example
+                                                ▇       ▁         -- Max: 50
+    ▃                       ▄   ▅               ▇       ▇
+    ▇     ▁           ▁     ▇   ▇ ▇       ▂ ▇   ▇     ▁ ▇   ▇
+    ▇     ▇     ▆ ▆   ▇ ▄   ▇   ▇ ▇     ▅ ▇ ▇   ▇     ▇ ▇   ▇
+    ▇     ▇     ▇ ▇   ▇ ▇   ▇   ▇ ▇     ▇ ▇ ▇ ▆ ▇ ▂ ▁ ▇ ▇   ▇
+    ▇     ▇     ▇ ▇   ▇ ▇   ▇   ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇   ▇
+    ▇   ▄ ▇   ▇ ▇ ▇   ▇ ▇   ▇   ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▂ ▇
+    ▇   ▇ ▇ ▆ ▇ ▇ ▇ ▄ ▇ ▇ ▇ ▇ ▄ ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇
+    ▇ ▃ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇
+    ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▄ ▁ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇   -- Min 2
