@@ -8,7 +8,9 @@
 
 ### Command line
 
-    pyplotter 1 2 3 4 5 ...
+    pyplotter 1 2 3 4 5
+    pyplotter 1 2 3 4 5 --show-min-max --padding 1 --title testing --height 3
+    pyplotter -h
 
 ### Inside python shell
 
