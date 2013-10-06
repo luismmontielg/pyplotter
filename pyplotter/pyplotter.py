@@ -44,9 +44,9 @@ class Plotter(object):
             print '\n'.join(lines)
             if graph.labels and show_x_axis:
                 print (u'%s' % x_sep.join(['<%s>[%s]%s'
-                            % (label[:label_length], str(v),
-                                get_padding_str(label, v))
-                                for label, v in zip(graph.labels, graph.data)]))
+                        % (label[:label_length], str(v),
+                            get_padding_str(label, v))
+                            for label, v in zip(graph.labels, graph.data)]))
             if show_data_range and graph.labels:
                 print 'Data range: %s - %s' % (graph.first_x, graph.last_x)
 
@@ -72,8 +72,9 @@ class Plotter(object):
             sep = ' ' * padding
         m = max(map(len, map(str, graph.data)))  # length of longest value
         x_sep = '  '
-        if show_x_axis:
-            sep = ' ' * (label_length + 1 + 2 + m + 2)  # 2('[])' + 2('<>') + 1 space
+        if show_x_axis and graph.labels:
+            # 2('[])' + 2('<>') + 1 space
+            sep = ' ' * (label_length + 1 + 2 + m + 2)
 
         __plot(graph)
 
@@ -232,8 +233,10 @@ class Graph(object):
                 strings.append(_s)
             return strings
 
-        mapped_values = [self.__get_stack_id(x, self.data, self.height) for x in self.data]
-        return [get_strings(stack_id, self.height) for stack_id in mapped_values]
+        mapped_values = ([self.__get_stack_id(x, self.data, self.height)
+                                                        for x in self.data])
+        return ([get_strings(stack_id, self.height)
+                        for stack_id in mapped_values])
 
     def __get_stack_id(self, value, values, height):
         """
@@ -251,7 +254,8 @@ class Graph(object):
 
         def step(values, height):
             step_range = max(values) - min(values)
-            return ((step_range / float((len(STACK_VALUES) * height) - 1))) or 1
+            return (((step_range / float((len(STACK_VALUES) * height) - 1)))
+                    or 1)
 
         step_value = step(values, height)
         return int(round((value - min(values)) / step_value))
