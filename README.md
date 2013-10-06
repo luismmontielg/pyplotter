@@ -56,3 +56,7 @@
     ▇   ▇ ▇ ▆ ▇ ▇ ▇ ▄ ▇ ▇ ▇ ▇ ▄ ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇
     ▇ ▃ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇
     ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▄ ▁ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇   -- Min 2
+
+## Notes
+
+  - When the markdown file is displayed as HTML, the bars do not align due to the spaces

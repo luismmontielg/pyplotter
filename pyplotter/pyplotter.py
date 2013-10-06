@@ -1,7 +1,8 @@
 #-*- coding: utf-8 -*-
 import itertools
 
-STACK_VALUES = u'▁▂▃▄▅▆▇'
+STACK_VALUES =   u'▁▂▃▄▅▆▇'
+STACK_VALUES_0 =   u' ▁▂▃▄▅▆▇'
 VOID_STR = ' '
 
 
@@ -204,26 +205,25 @@ class Graph(object):
         list, starting from the top level.
 
         structure: [
-            1st bar -> ['height str', 'height-1 str', ..., 'bottom level str'],
-            2nd bar -> ['height str', 'height-1 str', ..., 'bottom level str'],
+            1st bar -> ['1st level str', ..., 'height-1 str', 'height str'],
+            2nd bar -> ['1st level str', ..., 'height-1 str', 'height str'],
            ...
             last bar -> ...
         ]
-
         """
 
         def get_strings(stack_id, height):
             def _str(i):
                 if i == None:
                     return VOID_STR
-                return STACK_VALUES[i]
+                return self.__list[i]
 
             strings = list()
             for level in range(1, height + 1):
-                _len = len(STACK_VALUES) * level
+                _len = len(self.__list) * level
                 if _len > stack_id:
                     idx = stack_id - _len
-                    if (-1 * idx > len(STACK_VALUES)):
+                    if (-1 * idx > len(self.__list)):
                         idx = None
                 elif stack_id >= _len:
                     idx = -1
@@ -233,6 +233,10 @@ class Graph(object):
                 strings.append(_s)
             return strings
 
+        has_0 = min(self.data) == 0
+        self.__list = STACK_VALUES
+        if has_0:
+            self.__list = STACK_VALUES_0
         mapped_values = ([self.__get_stack_id(x, self.data, self.height)
                                                         for x in self.data])
         return ([get_strings(stack_id, self.height)
@@ -254,7 +258,7 @@ class Graph(object):
 
         def step(values, height):
             step_range = max(values) - min(values)
-            return (((step_range / float((len(STACK_VALUES) * height) - 1)))
+            return (((step_range / float((len(self.__list) * height) - 1)))
                     or 1)
 
         step_value = step(values, height)
