@@ -93,7 +93,8 @@ class Graph(object):
         self._tail = None
 
         self.data = data
-        self.labels = [str(e) for e in labels]
+        if labels:
+            self.labels = [str(e) for e in labels]
         self.height = 2  # default 2 lines
         self.title = title
 
