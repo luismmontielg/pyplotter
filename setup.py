@@ -26,7 +26,7 @@ except (OSError, IOError, ImportError) as e:
     except (IOError):
         long_description = ''
 
-dependencies = []
+dependencies = ['docopt>=0.6.1',]
 
 def publish():
     os.system("python setup.py sdist upload")
