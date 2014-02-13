@@ -32,6 +32,22 @@
     <17>[17]  <18>[18]  <19>[19]  <20>[20]  <21>[21]
     Data range: 17 - 21
 
+### Stock example
+
+    from pyplotter import Graph, Plotter
+    from pandas.io.data import DataReader
+    title = "TSLA, last 120 days"
+
+    df = DataReader("TSLA", "yahoo", start="2013/06/01").tail(120)
+    dates = [d.strftime("%Y/%m/%d") for d in df.index.date.tolist()]
+    data = df.Open.values.tolist()
+
+    graph = Graph(data=data, title=title, labels=dates)
+    Plotter.plot(graph, show_x_axis=False, height=20)
+
+![Result](http://i.imgur.com/6MWVF3G.png)
+
+
 ### Multiple display options
 
     help(pyplotter.Plotter.plot)

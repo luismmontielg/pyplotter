@@ -1,3 +1,9 @@
+## 0.0.6 (2014-02-12)
+
+Bugfixes:
+
+  - Minor stuff
+
 ## 0.0.2 (2013-10-05)
 
 Features:
